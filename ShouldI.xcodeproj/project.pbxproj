@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1896D34319422A3A00FCE250 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1896D34219422A3A00FCE250 /* QuartzCore.framework */; };
+		1896D3471942681700FCE250 /* buttonhigh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1896D3461942681700FCE250 /* buttonhigh@2x.png */; };
+		1896D3491942688D00FCE250 /* button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1896D3481942688D00FCE250 /* button@2x.png */; };
+		1896D34B19427CFE00FCE250 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1896D34A19427CFE00FCE250 /* logo@2x.png */; };
+		1896D34E1942811700FCE250 /* i@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1896D34C1942811700FCE250 /* i@2x.png */; };
+		1896D34F1942811700FCE250 /* ihover@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1896D34D1942811700FCE250 /* ihover@2x.png */; };
 		189D78B71940E9520015A05A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189D78B61940E9520015A05A /* Foundation.framework */; };
 		189D78B91940E9520015A05A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189D78B81940E9520015A05A /* CoreGraphics.framework */; };
 		189D78BB1940E9520015A05A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189D78BA1940E9520015A05A /* UIKit.framework */; };
@@ -21,6 +27,8 @@
 		189D78D81940E9520015A05A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189D78BA1940E9520015A05A /* UIKit.framework */; };
 		189D78E01940E9520015A05A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 189D78DE1940E9520015A05A /* InfoPlist.strings */; };
 		189D78E21940E9520015A05A /* ShouldITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 189D78E11940E9520015A05A /* ShouldITests.m */; };
+		189D793A1941BAD00015A05A /* galaxy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 189D79391941BAD00015A05A /* galaxy@2x.png */; };
+		760FD20FB94943E394C9FFC8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D00C8BDB74040C4A557ABAA /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1896D34219422A3A00FCE250 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		1896D3461942681700FCE250 /* buttonhigh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "buttonhigh@2x.png"; sourceTree = "<group>"; };
+		1896D3481942688D00FCE250 /* button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button@2x.png"; sourceTree = "<group>"; };
+		1896D34A19427CFE00FCE250 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		1896D34C1942811700FCE250 /* i@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "i@2x.png"; sourceTree = "<group>"; };
+		1896D34D1942811700FCE250 /* ihover@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ihover@2x.png"; sourceTree = "<group>"; };
 		189D78B31940E9520015A05A /* ShouldI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShouldI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		189D78B61940E9520015A05A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		189D78B81940E9520015A05A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +67,9 @@
 		189D78DD1940E9520015A05A /* ShouldITests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ShouldITests-Info.plist"; sourceTree = "<group>"; };
 		189D78DF1940E9520015A05A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		189D78E11940E9520015A05A /* ShouldITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShouldITests.m; sourceTree = "<group>"; };
+		189D79391941BAD00015A05A /* galaxy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "galaxy@2x.png"; sourceTree = "<group>"; };
+		19FEA93E57C644F88179FBBE /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		4D00C8BDB74040C4A557ABAA /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,9 +77,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1896D34319422A3A00FCE250 /* QuartzCore.framework in Frameworks */,
 				189D78B91940E9520015A05A /* CoreGraphics.framework in Frameworks */,
 				189D78BB1940E9520015A05A /* UIKit.framework in Frameworks */,
 				189D78B71940E9520015A05A /* Foundation.framework in Frameworks */,
+				760FD20FB94943E394C9FFC8 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +105,7 @@
 				189D78DB1940E9520015A05A /* ShouldITests */,
 				189D78B51940E9520015A05A /* Frameworks */,
 				189D78B41940E9520015A05A /* Products */,
+				19FEA93E57C644F88179FBBE /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,10 +121,12 @@
 		189D78B51940E9520015A05A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1896D34219422A3A00FCE250 /* QuartzCore.framework */,
 				189D78B61940E9520015A05A /* Foundation.framework */,
 				189D78B81940E9520015A05A /* CoreGraphics.framework */,
 				189D78BA1940E9520015A05A /* UIKit.framework */,
 				189D78D51940E9520015A05A /* XCTest.framework */,
+				4D00C8BDB74040C4A557ABAA /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -117,6 +139,7 @@
 				189D78C81940E9520015A05A /* Main.storyboard */,
 				189D78CB1940E9520015A05A /* ViewController.h */,
 				189D78CC1940E9520015A05A /* ViewController.m */,
+				189D79381941BAC30015A05A /* Images */,
 				189D78CE1940E9520015A05A /* Images.xcassets */,
 				189D78BD1940E9520015A05A /* Supporting Files */,
 			);
@@ -152,6 +175,19 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		189D79381941BAC30015A05A /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				1896D34C1942811700FCE250 /* i@2x.png */,
+				1896D34D1942811700FCE250 /* ihover@2x.png */,
+				1896D3481942688D00FCE250 /* button@2x.png */,
+				1896D3461942681700FCE250 /* buttonhigh@2x.png */,
+				189D79391941BAD00015A05A /* galaxy@2x.png */,
+				1896D34A19427CFE00FCE250 /* logo@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +195,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 189D78E51940E9520015A05A /* Build configuration list for PBXNativeTarget "ShouldI" */;
 			buildPhases = (
+				BAEEFD72CCC44B669C47FA98 /* Check Pods Manifest.lock */,
 				189D78AF1940E9520015A05A /* Sources */,
 				189D78B01940E9520015A05A /* Frameworks */,
 				189D78B11940E9520015A05A /* Resources */,
+				3403BF8818994005B47BE6A3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -228,8 +266,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1896D3471942681700FCE250 /* buttonhigh@2x.png in Resources */,
+				1896D34F1942811700FCE250 /* ihover@2x.png in Resources */,
 				189D78CF1940E9520015A05A /* Images.xcassets in Resources */,
 				189D78C11940E9520015A05A /* InfoPlist.strings in Resources */,
+				189D793A1941BAD00015A05A /* galaxy@2x.png in Resources */,
+				1896D34B19427CFE00FCE250 /* logo@2x.png in Resources */,
+				1896D3491942688D00FCE250 /* button@2x.png in Resources */,
+				1896D34E1942811700FCE250 /* i@2x.png in Resources */,
 				189D78CA1940E9520015A05A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +287,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3403BF8818994005B47BE6A3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAEEFD72CCC44B669C47FA98 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		189D78AF1940E9520015A05A /* Sources */ = {
@@ -373,6 +450,7 @@
 		};
 		189D78E61940E9520015A05A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19FEA93E57C644F88179FBBE /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -386,6 +464,7 @@
 		};
 		189D78E71940E9520015A05A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 19FEA93E57C644F88179FBBE /* Pods.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -456,6 +535,7 @@
 				189D78E71940E9520015A05A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		189D78E81940E9520015A05A /* Build configuration list for PBXNativeTarget "ShouldITests" */ = {
 			isa = XCConfigurationList;
@@ -464,6 +544,7 @@
 				189D78EA1940E9520015A05A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
