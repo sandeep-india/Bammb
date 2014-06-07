@@ -22,12 +22,20 @@
     UITextField *textField;
     UIView *anim3;
     UILabel *placeholderText;
+    NSMutableArray *labels;
+    NSInteger index;
+    UILabel *fromLabel;
+    CSAnimationView *animationViewz;
+    UIButton *playButton;
+    CSAnimationView *animationViewp;
 }
 
 - (void)viewDidLoad
 {
     
     [super viewDidLoad];
+    index = 0;
+    labels = [[NSMutableArray alloc]initWithObjects:@"edit photographs",@"read a book",@"learn to cook",@"organize bookmarks", nil];
     self.view.tintColor = [self colorWithHexString:@"e24d2b"];
     self.view.backgroundColor = [UIColor whiteColor];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -73,11 +81,11 @@
     
     
     
-    CSAnimationView *animationView = [[CSAnimationView alloc] initWithFrame:CGRectMake((320-labelSize.width)/2,115,labelSize.width,labelSize.height)];
-    animationView.duration = 0.5;
-    animationView.delay    = 0.1;
-    animationView.type     = CSAnimationTypeFadeInUp;
-    UILabel *fromLabel = [[UILabel alloc]initWithFrame:CGRectMake(0,0,labelSize.width,labelSize.height)];
+    animationViewz = [[CSAnimationView alloc] initWithFrame:CGRectMake((320-labelSize.width)/2,115,labelSize.width,labelSize.height)];
+    animationViewz.duration = 0.5;
+    animationViewz.delay    = 0.1;
+    animationViewz.type     = CSAnimationTypeFadeInUp;
+    fromLabel = [[UILabel alloc]initWithFrame:CGRectMake(0,0,labelSize.width,labelSize.height)];
     fromLabel.text = text;
     fromLabel.font = customFont;
     fromLabel.numberOfLines = 1;
@@ -89,9 +97,9 @@
     fromLabel.backgroundColor = [UIColor clearColor];
     fromLabel.textColor = [self colorWithHexString:@"2ad4ca"];
     fromLabel.textAlignment = NSTextAlignmentCenter;
-    [animationView addSubview:fromLabel];
-    [self.view addSubview:animationView];
-    [animationView startCanvasAnimation];
+    [animationViewz addSubview:fromLabel];
+    [self.view addSubview:animationViewz];
+    [animationViewz startCanvasAnimation];
     
     [self performSelector:@selector(addTextView) withObject:nil afterDelay:0.1];
     
@@ -172,7 +180,6 @@
 -(void) addTextView{
     
     UIFont * customFont = [UIFont fontWithName:@"Avenir-Light" size:30]; //custom font
-    
     textView = [[UITextView alloc]initWithFrame:CGRectMake(0,0,260,90)];
     textView.font = customFont;
     textView.layer.borderColor=[[UIColor clearColor]CGColor];
@@ -190,7 +197,25 @@
     textView.keyboardType = UIKeyboardTypeTwitter;
     textView.returnKeyType = UIReturnKeyDone;
     textView.delegate = self;
+
+     NSString * text1 = [labels objectAtIndex:index];
+     CGSize labelSize1 = [text1 sizeWithFont:customFont constrainedToSize:CGSizeMake(380,20) lineBreakMode:NSLineBreakByTruncatingTail];
+     placeholderText = [[UILabel alloc]initWithFrame:CGRectMake(5,8,labelSize1.width,labelSize1.height)];
+     placeholderText.text = text1;
+     placeholderText.font = customFont;
+     placeholderText.numberOfLines = 1;
+     placeholderText.baselineAdjustment = UIBaselineAdjustmentAlignBaselines; // or UIBaselineAdjustmentAlignCenters, or UIBaselineAdjustmentNone
+     placeholderText.adjustsFontSizeToFitWidth = YES;
+     placeholderText.adjustsLetterSpacingToFitWidth = YES;
+     placeholderText.minimumScaleFactor = 10.0f/12.0f;
+     placeholderText.clipsToBounds = YES;
+     placeholderText.backgroundColor = [UIColor clearColor];
+     placeholderText.textColor = [self colorWithHexString:@"d7f2f0"];
+     placeholderText.textAlignment = NSTextAlignmentLeft;
+    NSTimer* timer = [NSTimer timerWithTimeInterval:3.5f target:self selector:@selector(updateLabel) userInfo:nil repeats:YES];
+    [[NSRunLoop mainRunLoop] addTimer:timer forMode:NSRunLoopCommonModes];
     
+    [textView addSubview:placeholderText];
     [animationView1 addSubview:textView];
     [self.view addSubview:animationView1];
     [animationView1 startCanvasAnimation];
@@ -198,12 +223,39 @@
     
     [self performSelector:@selector(addButton) withObject:nil afterDelay:0.1];
     
-    
 }
+
+-(void) updateLabel{
+    if (index  < ([labels count]-1)){
+    POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
+    anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    anim.fromValue = @(0.0);
+    anim.toValue = @(1.0);
+    [placeholderText pop_addAnimation:anim forKey:@"fade1"];
+    index = index + 1 ;
+    NSString * text1 = [labels objectAtIndex:index];
+    placeholderText.text = text1;
+    }
+    else {
+
+        POPBasicAnimation *anim = [POPBasicAnimation animationWithPropertyNamed:kPOPViewAlpha];
+        anim.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+        anim.fromValue = @(0.0);
+        anim.toValue = @(1.0);
+        [placeholderText pop_addAnimation:anim forKey:@"fade1"];
+        index = 0;
+        NSString * text1 = [labels objectAtIndex:index];
+        placeholderText.text = text1;
+    }
+}
+
+
+
+
 
 -(void) addButton{
     
-    UIButton *playButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    playButton = [UIButton buttonWithType:UIButtonTypeCustom];
     playButton.frame = CGRectMake(0,0,260,60);
     [playButton setImage:[UIImage imageNamed:@"button"] forState:UIControlStateNormal];
     [playButton setImage:[UIImage imageNamed:@"buttonhigh"] forState:UIControlStateHighlighted];
@@ -230,22 +282,37 @@
     [iButton setImage:[UIImage imageNamed:@"i"] forState:UIControlStateNormal];
     [iButton setImage:[UIImage imageNamed:@"ihover"] forState:UIControlStateHighlighted];
     
-    CSAnimationView *animationView = [[CSAnimationView alloc] initWithFrame:CGRectMake(275,15,30,30)];
-    animationView.duration = 0.5;
-    animationView.delay    = 0.1;
-    animationView.type     = CSAnimationTypeFadeIn;
+    animationViewp = [[CSAnimationView alloc] initWithFrame:CGRectMake(275,15,30,30)];
+    animationViewp.duration = 0.5;
+    animationViewp.delay    = 0.1;
+    animationViewp.type     = CSAnimationTypeFadeIn;
     
     //[playButton setImage:[UIImage imageNamed:@"buttonhigh"] forState:UIControlStateHighlighted];
     [iButton addTarget:self action:@selector(iAction) forControlEvents:UIControlEventTouchUpInside];
-    [animationView addSubview:iButton];
-    [self.view addSubview:animationView];
-    [animationView startCanvasAnimation];
+    [animationViewp addSubview:iButton];
+    [self.view addSubview:animationViewp];
+    [animationViewp startCanvasAnimation];
+    
 }
 
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text
 {
     return textView.text.length + (text.length - range.length) <=50;
 }
+
+
+
+
+- (void) textViewDidChange:(UITextView *)textView{
+    
+    if (textView.text.length == 0){
+        placeholderText.hidden = FALSE;
+    }
+    else{
+        placeholderText.hidden = TRUE;
+    }
+}
+
 
 -(void) showKeys{
     [textView becomeFirstResponder];
@@ -257,9 +324,46 @@
 
 -(void) playAction{
     
+    if ([textView.text  isEqualToString:@""]){
+        animationViewz.type = CSAnimationTypeShake;
+        animationViewz.duration = 0.3;
+        [animationViewz startCanvasAnimation];
+    }
+    else{
+        
+        POPDecayAnimation *anim = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+        anim.velocity = @(-1400.0);
+        [fromLabel.layer pop_addAnimation:anim forKey:@"slide"];
+        [self performSelector:@selector(removeTextView) withObject:nil afterDelay:0.2];
+    }
+    
 }
 
+-(void) removeTextView{
+    
+    POPDecayAnimation *anim = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+    anim.velocity = @(-1400.0);
+    [textView.layer pop_addAnimation:anim forKey:@"slide"];
+    [self performSelector:@selector(removeButton) withObject:nil afterDelay:0.1];
+    
+}
 
+-(void) removeButton{
+    POPDecayAnimation *anim = [POPDecayAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+    anim.velocity = @(-1400.0);
+    [playButton.layer pop_addAnimation:anim forKey:@"slide"];
+    [self performSelector:@selector(suspendkeys) withObject:nil afterDelay:0.5];
+    [self performSelector:@selector(removeInfo) withObject:nil afterDelay:0.6];
+}
+
+-(void) suspendkeys{
+    [textView resignFirstResponder];
+}
+
+-(void) removeInfo{
+    animationViewp.type = CSAnimationTypeFadeOut;
+    [animationViewp startCanvasAnimation];
+}
 
 -(void) fadeColor{
     
