@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>9F6696AB-F95D-420D-A953-BA44CDD14676</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ShouldI</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>BCD0F5E3-3BEB-4BE2-AB83-B08F5489D873</key>
+		<string>https://github.com/sandeep-india/Bammb.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>ShouldI.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>BCD0F5E3-3BEB-4BE2-AB83-B08F5489D873</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sandeep-india/Bammb.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>BCD0F5E3-3BEB-4BE2-AB83-B08F5489D873</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>BCD0F5E3-3BEB-4BE2-AB83-B08F5489D873</string>
+			<key>IDESourceControlWCCName</key>
+			<string>ShouldI</string>
+		</dict>
+	</array>
+</dict>
+</plist>
